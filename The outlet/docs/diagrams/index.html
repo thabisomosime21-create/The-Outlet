@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Outlet — Design Diagrams</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+        .navbar {
+            background: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+        }
+        .navbar .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a { color: #fff; text-decoration: none; }
+        .navbar a:hover { color: #2d6a4f; }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 20px;
+        }
+        h1 { margin-bottom: 0.5rem; }
+        .intro {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2d6a4f;
+        }
+        .diagram-card {
+            background: #fff;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        .diagram-card h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+        .diagram-card img {
+            width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+        .diagram-links {
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .diagram-links a {
+            color: #2d6a4f;
+            word-break: break-all;
+        }
+        .hosting-note {
+            background: #e8f5e9;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-top: 1rem;
+        }
+        .hosting-note h3 { margin-bottom: 0.5rem; color: #1a1a1a; }
+        .hosting-note code {
+            background: #fff;
+            padding: 0.15rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.php"><strong>The Outlet</strong></a>
+            <a href="../../index.php">← Back to site</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Design Diagrams</h1>
+        <p style="margin-bottom: 1.5rem; color: #666;">System design diagrams for the The Outlet marketplace platform.</p>
+
+        <div class="intro">
+            <p>These diagrams are static PNG images served from this folder. Upload the entire <code>docs/diagrams/</code> directory with your project to host them on any PHP web host (cPanel, Hostinger, etc.).</p>
+            <p style="margin-top: 0.75rem;"><strong>PDF:</strong> <a href="The Outlet_Design_Diagrams.pdf">Download all diagrams as PDF</a></p>
+        </div>
+
+        <div class="diagram-card">
+            <h2>1. CRC Cards</h2>
+            <img src="images/01_crc_cards.png" alt="CRC Cards diagram">
+            <div class="diagram-links">Direct URL: <a href="images/01_crc_cards.png">images/01_crc_cards.png</a></div>
+        </div>
+
+        <div class="diagram-card">
+            <h2>2. Entity Relationship Diagram (EERD)</h2>
+            <img src="images/02_entity_relationship.png" alt="Entity relationship diagram">
+            <div class="diagram-links">Direct URL: <a href="images/02_entity_relationship.png">images/02_entity_relationship.png</a></div>
+        </div>
+
+        <div class="diagram-card">
+            <h2>3. Context Diagram</h2>
+            <img src="images/03_context_diagram.png" alt="Context diagram">
+            <div class="diagram-links">Direct URL: <a href="images/03_context_diagram.png">images/03_context_diagram.png</a></div>
+        </div>
+
+        <div class="diagram-card">
+            <h2>4. Data Flow Diagram (Level 0)</h2>
+            <img src="images/04_dfd_level0.png" alt="DFD level 0 diagram">
+            <div class="diagram-links">Direct URL: <a href="images/04_dfd_level0.png">images/04_dfd_level0.png</a></div>
+        </div>
+
+        <div class="diagram-card">
+            <h2>5. Use Case Diagram</h2>
+            <img src="images/05_use_case.png" alt="Use case diagram">
+            <div class="diagram-links">Direct URL: <a href="images/05_use_case.png">images/05_use_case.png</a></div>
+        </div>
+
+        <div class="diagram-card">
+            <h2>6. Database Schema</h2>
+            <img src="images/06_database_schema.png" alt="Database schema diagram">
+            <div class="diagram-links">Direct URL: <a href="images/06_database_schema.png">images/06_database_schema.png</a></div>
+        </div>
+
+        <div class="hosting-note">
+            <h3>Hosting</h3>
+            <p>After uploading to <code>public_html</code>, open:</p>
+            <p><code>https://yourdomain.com/docs/diagrams/</code></p>
+            <p style="margin-top: 0.5rem;">Individual images are at <code>https://yourdomain.com/docs/diagrams/images/01_crc_cards.png</code> (and similar paths for each file).</p>
+            <p style="margin-top: 0.5rem;">To regenerate images after editing, run: <code>python scripts/generate_diagrams.py</code></p>
+        </div>
+    </div>
+</body>
+</html>
